@@ -1,0 +1,221 @@
+*::-webkit-input-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*:-moz-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*::-moz-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*:-ms-input-placeholder {
+	color: #666;
+	opacity: 1;
+}
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+	
+}
+body input:required:valid,
+body textarea:required:valid {
+	
+}
+
+body {
+	font-family: sans-serif;
+	font-size: 16px;
+	min-width: 320px;
+	position: relative;
+	line-height: 1.6;
+	font-family: "Rubik", sans-serif;
+	overflow-x: hidden;
+	padding: 0;
+	margin: 0;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;	
+}
+.hidden {
+	display: none;
+}
+
+.header {
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+.header .logo a {
+	display: block;
+	font-size: 24px;
+	font-weight: 600;
+	color: #333;
+}
+.header .menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+main {
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+footer {
+	/*
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    */
+    margin-top: auto;
+    background: #333;
+
+}
+.footer {
+	padding: 30px 0;
+	text-align: center;
+	color: #fff;
+}
+.form-buttons {
+	display: flex;
+	align-items: center;
+    justify-content: space-between;	
+}
+.sign-link {
+	text-align: right;
+}
+
+.photos {
+	display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    gap: 25px;
+}
+.photo {
+	width: 23%;
+}
+.photo img {
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+.photo-btn {
+	text-align: right;
+}
+.comments {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+.comment {
+	border: 1px solid #eee;
+	padding: 15px;
+	border-radius: 6px;
+}
+.commant-header {
+    display: flex;
+    border-bottom: 1px solid #eee;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+}
+.comment-name {
+	font-size: 21px;
+	font-weight: 500;
+}
+.comment-date {
+	font-size: 14px;
+}
+.commant-text {
+	border-bottom: 1px solid #eee;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+.comment .comment-btn {
+	text-align: right;
+}
+
+
+
+
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	
+	/*Disable Animation on Mobile Devices*/
+	.animated {
+		/*CSS transitions*/
+		-o-transition-property: none !important;
+		-moz-transition-property: none !important;
+		-ms-transition-property: none !important;
+		-webkit-transition-property: none !important;
+		transition-property: none !important;
+		/*CSS transforms*/
+		-o-transform: none !important;
+		-moz-transform: none !important;
+		-ms-transform: none !important;
+		-webkit-transform: none !important;
+		transform: none !important;
+		/*CSS animations*/
+		-webkit-animation: none !important;
+		-moz-animation: none !important;
+		-o-animation: none !important;
+		-ms-animation: none !important;
+		animation: none !important;
+	}
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}
