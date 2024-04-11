@@ -1,25 +1,3 @@
-<?php
-if (!empty($_POST['email']) && !empty($_POST['password'])) {
-    
-    $result = getUserByEmail($_POST['email']);
-
-    if (!empty($result) && (password_verify($_POST['password'], $result['password']))) {
-
-        $hash = md5(generateCode(10));
-        $user_ip = $_SERVER['REMOTE_ADDR'];
-
-        updateUserHash($result['id'], $hash, $user_ip);
-
-        setcookie("id", $result['id'], time()+60*60*24*30, "/");
-        setcookie("hash", $hash, time()+60*60*24*30, "/", null, null, true);
-
-    } 
-
-    header("Location: /login"); exit; 
-}
-
-?>
-
 <?php if (!empty(checkUser())): $user = checkUser(); ?>
 
 <div class="row">
@@ -116,7 +94,7 @@ if (!empty($_FILES)) {
 		<h1>Войти</h1>
 	</div>	
     <div class="col-12 col-md-4 offset-md-4">
-        <form action="" method="post">
+        <form action="config/autorization.php" method="post">
             <div class="form-group">
                 <label for="email">Email</label>
                 <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Введите email" required>

@@ -14,17 +14,14 @@
 	</div>
 </div>
 
-<?php if (!empty($_POST['comments'])): 
-	addComment(['user_id' => $user['id'], 'photo_id' => $photo_id, 'comment' => $_POST['comments']]);
-	 header("Location: /photo/".$photo_id); exit; 
-endif; ?>	
-
 <?php if (!empty($user)): ?>
 <div class="row mt-5">
 	<div class="col-6">	
 		<h2>Оставить комментарий</h2>
-		<form action="" method="post">
+		<form action="/config/add_comment.php" method="post">
 			<div class="form-group">
+				<input type="hidden" name="user_id" value="<?= $user['id']; ?>">
+				<input type="hidden" name="photo_id" value="<?= $photo_id; ?>">
 				<textarea class="form-control" name="comments"></textarea>
 			</div>
 			<button type="submit" class="btn btn-primary">Отправить</button>

@@ -38,7 +38,7 @@
       <div class="menu">
         <?php if (!empty(checkUser())): ?>
           <a href="/login">Моя страница</a>
-          <a href="/logout" class="btn btn-primary">Выйти</a>
+          <button class="btn btn-primary" onclick="logout(); return true;">Выйти</button>
         <?php else: ?>
           <a href="/login" class="btn btn-primary">Войти</a>
         <?php endif; ?>

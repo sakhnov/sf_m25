@@ -77,3 +77,33 @@ function deletePhoto(id) {
             }
     });
 }
+
+function logout() {
+    console.log('logout');
+    $.ajax({
+            type:'POST',
+            url: '/config/logout.php',
+            success: function(response){
+                location.href = '/';
+            },
+            error: function(response){  
+
+            }
+    });
+}
+
+$('#addComment').submit(function(e){
+    e.preventDefault();
+    var data = new FormData(this);
+    $.ajax({
+        type:'POST',
+        url: 'config/add_comment.php',
+        data: data,
+        success: function(response){
+            location.href = '/photo';
+        },
+        error: function(response){  
+
+        }    
+    });
+});
